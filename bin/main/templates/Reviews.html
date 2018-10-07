@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>A List of All Car Reviews For Now</title>
+</head>
+<body>
+
+<header>
+		<h1>Reviews</h1>
+		<nav>
+			<ul>
+				<li><a href="/reviews">Some Reviews</a></li>
+				<!--
+					Remember you need 'th:' prefacing any
+					attribute that Thymeleaf is interacting
+					with
+				-->
+				<li th:each="review : ${reviews}"><a th:href="|/reviews/${review.id}|" th:text="${review.name}">Review</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<ul>
+			<li th:each="review : ${reviews}"><a th:href="|/reviews/${review.id}|" th:text="${review.title}" th:text =${review.content}>Content</a></li>
+		</ul>
+	</main>
+
+	<footer>
+		<small>&copy; WCCI 2018</small>
+	</footer>
+
+</body>
+</html>

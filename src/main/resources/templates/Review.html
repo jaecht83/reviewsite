@@ -1,0 +1,34 @@
+<!-- 
+	All templates represent the View layer.
+	
+	These are the pieces that build the things
+	that get rendered in the browser.
+	
+	This is what your user will see/interact with.
+	
+	!DON'T FORGET SEMANTIC MARKUP!
+ -->
+ <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title th:text="${review.title}">Review of Cars</title>
+	<!-- Do something useful with the review's identifier -->
+</head>
+<body>
+	<header>
+		<h1 th:text="${review.title}">Review</h1><!-- Name of the Review -->
+		<nav>
+			<ul>
+				<li><a href="/reviews">Reviews</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h3 th:text="${review.content}">Below you will find Each Car Review</h3><!-- content stuff -->
+		<img th:src="@{|/images/${review.imageurl}|}">
+	</main>
+	<footer>
+		<small>&copy; WCCI 2018</small>
+	</footer>
+</body>
+</html>
