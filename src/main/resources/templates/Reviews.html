@@ -10,11 +10,9 @@
 		<nav>
 			<ul>
 				<li><a href="/reviews">Some Reviews of Randomly Awesome Cars</a></li>
-				<!--
-					Remember you need 'th:' prefacing any
-					attribute that Thymeleaf is interacting
-					with
-				-->
+			
+			<p>These are random cars made in the U.S. and Japan. When you're starting out, you need a new, cheap car.</p>
+			
 				<li th:each="review : ${reviews}"><a th:href="|/review/${review.id}|" th:text="${review.title}"></a></li>
 			</ul>
 		</nav>
