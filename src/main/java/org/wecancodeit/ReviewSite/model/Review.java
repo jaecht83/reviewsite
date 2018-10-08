@@ -6,16 +6,16 @@ public class Review {
 	private String title;
 	private String imageurl;
 	private String content;
-	private String bodycategory;
-	private String bodytype;
+	private String bodyCategory;
+	private String bodyType;
 
-	public Review(Long id, String title, String imageurl, String content, String bodycategory, String bodytype) {
+	public Review(Long id, String title, String imageurl, String content, String bodyCategory, String bodyType) {
 		this.id = id;
 		this.title = title;
 		this.imageurl = imageurl;
 		this.content = content;
-		this.bodycategory = bodycategory;
-		this.bodytype = bodytype;
+		this.bodyCategory = bodyCategory;
+		this.bodyType = bodyType;
 	}
 
 	public String getTitle() {
@@ -35,10 +35,10 @@ public class Review {
 	}
 
 	public String getBodyCategory() {
-		return bodycategory;
+		return bodyCategory;
 	}
 
 	public String getBodyType() {
-		return bodytype;
+		return bodyType;
 	}
 }

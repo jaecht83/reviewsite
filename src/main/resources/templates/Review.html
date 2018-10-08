@@ -25,6 +25,11 @@
 	</header>
 	<main>
 		<h3 th:text="${review.content}">Below you will find Each Car Review</h3><!-- content stuff -->
+
+		<h4 th:text="${review.bodyType}">This is a description of each car's bodytype</h4>
+		<h4 th:text="${review.bodyCategory}">This is a description of the categories</h4>
+
+
 		<img th:src="@{|/images/${review.imageurl}|}">
 	</main>
 

@@ -11,8 +11,8 @@
 			<ul>
 				<li><a href="/reviews">Some Reviews of Randomly Awesome Cars</a></li>
 			
-			<p>These are random cars made in the U.S. and Japan. When you're starting out, you need a new, cheap car.</p>
-			
+			<p>These are random cars made in the U.S. and Japan. When you're starting out, you need a new, cheap car. These are simple reviews, but give you a general idea of what each car is like.</p>
+
 				<li th:each="review : ${reviews}"><a th:href="|/review/${review.id}|" th:text="${review.title}"></a></li>
 			</ul>
 		</nav>
